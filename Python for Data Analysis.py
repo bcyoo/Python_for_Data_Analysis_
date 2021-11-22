@@ -85,7 +85,7 @@ dt.minute
 # strftime 메서드는 datetime을 문자열로 만들어줌
 dt.strftime('%m/%d/%Y %H:%M')
 
-# ## 흐름 제어
+# # 흐름 제어
 
 x = 0
 
@@ -114,7 +114,7 @@ if a < b or c > d:
 ## 예제에서 왼쪽 조건이 Ture이므로 오른쪽 c > d 조건은 검사하지않는다.
 # -
 
-# ## for문
+# # for문
 
 # +
 for value in collection:
@@ -150,3 +150,46 @@ total_until_5
 
 ## for문은 braek 예악어를 사용해서 빠져날 수 있다. x가 sequence를 돌다가 5를 만나면 braek 하여
 ## 1, 2, 4, 6을 더하여 13의 결과값이 total_untile_5에 들어간다.
+# -
+
+## break 예약어는 가장 안쪽에 있는 for문만 빠져나감. 바깥쪽에 있는 for문은 계속 실행된다.
+for i in range(4):
+    for j in range(4):
+        if j > i :
+            break
+        print((i, j))
+
+# # while문
+
+# +
+## while문은 조건을 명시하여 해당 조건이 False가 되거나 break 문을 사용해서 
+## 명시적으로 반복을 끝낼 때까지 블록 내의 코드를 수행함.
+
+x = 256
+total = 0
+
+while x > 0:
+    if total > 500:
+        break
+    total += x
+    x = x // 2
+
+total
+# -
+
+# # pass
+
+## pass는 아무 것도 하지 않음을 나타낸다.
+## 블록내에 어떤 작업도 실행하지 않을 때 사용한다.
+x = -2
+if x < 0 :
+    print('negative')
+elif x == 0 :
+    # 여기에 내용을 채울것
+    pass
+else : 
+    print('positive')
+
+range (10)
+
+list(range(10))
