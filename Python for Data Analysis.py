@@ -101,3 +101,52 @@ elif 0 < x < 5:
     print('positive but smller than 5')
 else:
     print('positive and larger than or equal to 5')
+
+a = 5
+b = 7
+c = 8
+d = 4
+
+# +
+if a < b or c > d:
+    print('Made it')
+    
+## 예제에서 왼쪽 조건이 Ture이므로 오른쪽 c > d 조건은 검사하지않는다.
+# -
+
+# ## for문
+
+# +
+for value in collection:
+    # value를 이용하는 코드 작성
+    
+## for 문은 cotinue 예약어를 사용해서 남은 블록을 건너뛰고 다음 순회로 넘어 갈 수 있다.
+## None 값은 건너 뛰고 리스트에 있는 모든 정수를 더하는 다음 코드를 살펴보자
+
+# +
+sequence = [1, 2, None, 4, None, 5]
+
+total = 0
+
+for value in sequence:
+    if value is None:
+        continue
+    total += value
+    
+total
+
+## for 문은 cotinue 예약어를 사용해서 남은 블록을 건너뛰고 다음 순회로 넘어 갈 수 있다.
+## None 값은 건너 뛰고 리스트에 있는 모든 정수를 더한다
+
+# +
+sequence = [1, 2, 0, 4, 6, 5, 2, 1]
+total_until_5 = 0
+for x in sequence:
+    if x == 5:
+        break
+    total_until_5 += x
+
+total_until_5
+
+## for문은 braek 예악어를 사용해서 빠져날 수 있다. x가 sequence를 돌다가 5를 만나면 braek 하여
+## 1, 2, 4, 6을 더하여 13의 결과값이 total_untile_5에 들어간다.
