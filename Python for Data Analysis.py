@@ -190,6 +190,56 @@ elif x == 0 :
 else : 
     print('positive')
 
+## range 함수는 연속된 정수를 넘겨주는 이터레이터를 반환함.
 range (10)
 
 list(range(10))
+
+## (start, end, step)
+list(range(0, 20, 2))
+
+## range 값은 마지막 값 바로 이전 정수까지의 값을 반환한다.
+list(range(5, 0, -1))
+
+# +
+seq = [1, 2, 3, 4]
+for i in range(len(seq)):
+    val = seq[i]
+    
+val
+
+# +
+## 0부터 99999가지 모든 정수 중에서 3도는 5의 배수를 모두 더한다.
+
+sum = 0
+for i in range(10000):
+    if i % 3 == 0 or i % 5 == 0:
+        sum += i
+
+sum
+
+# +
+## 삼항 표현식 if-else 블록을 한줄로 표현할 수 있다.
+
+## value = true-expr if condition else false-expr
+
+## 위 아래는 같은 결과 값을 출력한다.
+
+#  if condition:
+#        value = true-expr
+#  else:
+#        valeu = false-expr
+
+# -
+
+# 삼항 표현식은 if-else 처럼 참인 경우에만 표현식이 실행된다.
+x = 5
+'Non-negative' if x >=0 else 'negative'
+
+# +
+tup = 4, 5, 6
+
+tup
+# -
+
+
